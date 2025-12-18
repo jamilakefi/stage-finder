@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>StageFinder</title>
+  <link rel="stylesheet" href="Projet_CSS.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-center" onclick="goHome()">
+    <img src="logo.png" class="logo">
+    <h1 style="text-decoration: solid;">StageFinder</h1>
+    <h2>Find your Intership.Anywhere.Anytime.</h2>
+  </div>
+</header>
+
+<section id="home" class="section">
+  <h1>Bienvenue sur StageFinder</h1>
+
+  <div class="choice">
+    <div class="choice-card entreprise" onclick="showCompanyLogin()">
+      Espace Entreprise
+    </div>
+
+    <div class="choice-card etudiant" onclick="showStudentLogin()">
+      Espace Étudiant
+    </div>
+  </div>
+</section>
+
+<section id="companyLogin" class="section hidden">
+  <h2>Connexion Entreprise</h2>
+  <form onsubmit="loginCompany(event)">
+    <input type="text" placeholder="Nom de l'entreprise" required>
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Mot de passe" required>
+    <button>Se connecter</button>
+  </form>
+</section>
+
+<section id="studentLogin" class="section hidden">
+  <h2>Connexion Étudiant</h2>
+  <form onsubmit="loginStudent(event)">
+    <input type="text" placeholder="Nom" required>
+    <input type="text" placeholder="Prénom" required>
+    <input type="email" placeholder="Email" required>
+    <button>Se connecter</button>
+  </form>
+</section>
+
+<section id="companyPage" class="section hidden">
+  <h2>Candidats disponibles</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="photo2.jpg" class="avatar">
+      <h3>Ahmed</h3>
+      <p>Finance  | Recherche alternance dès septembre 2026</p>
+      <button class="cv-btn">Voir CV</button>
+      <button class="contact-btn">Candidater le stagiaire</button>
+    </div>
+
+    <div class="card">
+      <img src="photo1.jpg" class="avatar">
+      <h3>Sara</h3>
+      <p>Data Analyst | Data Storytelling & Visualisation | Power BI • SQL</p>
+      <button class="cv-btn">Voir CV</button>
+      <button class="contact-btn">Candidater le stagiaire</button>
+    </div>
+  </div>
+</section>
+
+<section id="studentPage" class="section hidden">
+  <h2>Offres de stage & alternance</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="techsolution.png" class="company-logo">
+      <h3>Développeur Web</h3>
+      <p>TechSolutions – Paris</p>
+      <button class="apply-btn">Postuler</button>
+      <button class="about-btn">À propos du poste</button>
+    </div>
+
+    <div class="card">
+      <img src="datacorp.png" class="company-logo">
+      <h3>Marketing digital</h3>
+      <p>DataCorp – Lyon</p>
+      <button class="apply-btn">Postuler</button>
+      <button class="about-btn">À propos du poste</button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2025 StageFinder</p>
+</footer>
+
+<script src="Projet_JS.js"></script>
+</body>
+</html>
